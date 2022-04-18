@@ -26,9 +26,6 @@ export class TodosComponent implements OnInit {
   async addTodo(){
     let response = await fetch(`${this.url}/${this.todoList.length + 1} `);
     let json: Todo = await response.json();
-    if (json.completed){
-      console.log(json)
-    }
     this.todoList.push(json);
   }
 
