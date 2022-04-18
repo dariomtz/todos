@@ -1,0 +1,7 @@
+<app-todos-counter [count]="todoList.length"></app-todos-counter>
+<button (click)="addTodo()">Add todo</button>
+<div *ngFor="let todo of todoList">
+  <input type="checkbox" [checked]="todo.completed">
+  {{ todo.title }}
+</div>
+
